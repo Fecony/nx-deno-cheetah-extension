@@ -1,6 +1,7 @@
 {
   "imports": {
     "cheetah": "https://deno.land/x/cheetah@v1.1.0/mod.ts",
-    "zod": "https://deno.land/x/zod@v3.21.4/mod.ts"
+    "zod": "https://deno.land/x/zod@v3.21.4/mod.ts",
+    "@nx-deno-cheetah-extension/cheetah-extension-example": "./libs/cheetah-extension-example/mod.ts"
   }
 }

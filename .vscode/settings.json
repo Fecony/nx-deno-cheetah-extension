@@ -1,6 +1,7 @@
 {
   "deno.enablePaths": [
-    "apps/cheetah-backend"
+    "apps/cheetah-backend",
+    "libs/cheetah-extension-example"
   ],
   "deno.unstable": true,
   "deno.importMap": "./import_map.json"

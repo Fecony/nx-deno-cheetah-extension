@@ -1,5 +1,6 @@
 import cheetah, { Collection } from "cheetah";
 import { z } from "zod";
+import { exampleExtension } from "@nx-deno-cheetah-extension/cheetah-extension-example";
 
 const fastFood = new Collection()
   .get("/burger", () => "🍔")
@@ -8,6 +9,7 @@ const fastFood = new Collection()
   .get("/pizza", () => "🍕");
 
 const app = new cheetah()
+  .use(exampleExtension())
   .use("/fast-food", fastFood)
   .get("/cookie", () => "🍪")
   .get(

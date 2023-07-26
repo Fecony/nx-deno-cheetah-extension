@@ -1,0 +1,26 @@
+{
+  "name": "cheetah-extension-example",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/cheetah-extension-example",
+  "projectType": "library",
+  "targets": {
+    "test": {
+      "executor": "@nx/deno:test",
+      "outputs": [
+        "coverage/libs/cheetah-extension-example"
+      ],
+      "options": {
+        "coverageDirectory": "coverage/libs/cheetah-extension-example",
+        "denoConfig": "libs/cheetah-extension-example/deno.json",
+        "check": "local"
+      }
+    },
+    "lint": {
+      "executor": "@nx/deno:lint",
+      "options": {
+        "denoConfig": "libs/cheetah-extension-example/deno.json"
+      }
+    }
+  },
+  "tags": []
+}
