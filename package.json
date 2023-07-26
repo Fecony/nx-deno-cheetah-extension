@@ -2,13 +2,12 @@
   "name": "@nx-deno-cheetah-extension/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {
-  },
+  "scripts": {},
   "private": true,
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
-    "nx": "16.5.5",
-    "@nx/workspace": "16.5.5"
+    "@nx/deno": "^16.4.0",
+    "@nx/workspace": "16.5.5",
+    "nx": "16.5.5"
   }
 }
