@@ -1,0 +1,6 @@
+{
+  "importMap": "../../import_map.json",
+  "tasks": {
+    "upgrade": "deno run -A https://deno.land/x/upgrade@v1.0.1/mod.ts"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "cheetah-backend",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/cheetah-backend/src",
+  "targets": {
+    "build": {
+      "executor": "@nx/deno:emit",
+      "outputs": ["dist/apps/cheetah-backend"],
+      "options": {
+        "main": "apps/cheetah-backend/src/mod.ts",
+        "outputFile": "dist/apps/cheetah-backend/main.js",
+        "denoConfig": "apps/cheetah-backend/deno.json"
+      }
+    },
+    "serve": {
+      "executor": "@nx/deno:run",
+      "options": {
+        "buildTarget": "cheetah-backend:build",
+        "watch": true
+      }
+    },
+    "test": {
+      "executor": "@nx/deno:test",
+      "outputs": ["coverage/apps/cheetah-backend"],
+      "options": {
+        "coverageDirectory": "coverage/apps/cheetah-backend",
+        "denoConfig": "apps/cheetah-backend/deno.json"
+      }
+    },
+    "lint": {
+      "executor": "@nx/deno:lint",
+      "options": {
+        "denoConfig": "apps/cheetah-backend/deno.json"
+      }
+    }
+  },
+  "tags": []
+}
