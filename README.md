@@ -33,9 +33,9 @@ To create Deno library:
 nx g @nx/deno:lib
 ```
 
-### Deploy!
+## Deploy!
 
-## Deno Deploy
+### Deno Deploy
 
 In order to deploy your cheetah app on [Deno Deploy](https://deno.com/deploy) you have to create new project.
 
