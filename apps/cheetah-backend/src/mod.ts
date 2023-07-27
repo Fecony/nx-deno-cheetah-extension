@@ -10,6 +10,7 @@ const fastFood = new Collection()
 
 const app = new cheetah()
   .use(exampleExtension())
+  .get("/", () => "Hello, cheetah!")
   .use("/fast-food", fastFood)
   .get("/cookie", () => "🍪")
   .get(
