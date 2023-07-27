@@ -32,3 +32,25 @@ To create Deno library:
 ```bash
 nx g @nx/deno:lib
 ```
+
+### Deploy!
+
+## Deno Deploy
+
+In order to deploy your cheetah app on [Deno Deploy](https://deno.com/deploy) you have to create new project.
+
+Then you can add Git Integration by selecting your cheetah monorepo repository -> Automatic mode -> Select your server entry file `apps/cheetah-backend/src/mod.ts`
+
+Or you can deploy it from CLI as well!
+
+First of all you have to setup deploy config, run following command to do so
+
+```bash
+nx g @nx/deno:setup-deploy --site <your-deno-deploy-project-name>
+```
+
+Then run deploy command on your your project by specyfing preview or production environment and passing access token.
+
+```bash
+nx run cheetah-backend:deploy:<preview | production> --token=<your access token from deno deploy dashboard>
+```

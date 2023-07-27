@@ -33,6 +33,20 @@
       "options": {
         "denoConfig": "apps/cheetah-backend/deno.json"
       }
+    },
+    "deploy": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "deployctl deploy --project=able-dragonfly-22 --import-map=import_map.json --exclude=node_modules  apps/cheetah-backend/src/mod.ts --dry-run"
+      },
+      "configurations": {
+        "preview": {
+          "command": "deployctl deploy --project=able-dragonfly-22 --import-map=import_map.json --exclude=node_modules apps/cheetah-backend/src/mod.ts"
+        },
+        "production": {
+          "command": "deployctl deploy --project=able-dragonfly-22 --import-map=import_map.json --exclude=node_modules --prod apps/cheetah-backend/src/mod.ts"
+        }
+      }
     }
   },
   "tags": []
